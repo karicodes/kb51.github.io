@@ -57,7 +57,7 @@ body {
 }
 
 .titles {
-text-align: center;
+  text-align: center;
 }
 
 #about {
@@ -77,30 +77,32 @@ text-align: center;
 
 #suitcase-image {
   transform: rotate(90deg);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  
+}
+
+.suitcase {
+  display: flex;
+  justify-content: center;
 }
 
 #destinations {
-  height: 95vh;
+  min-height: 95vh;
   background: linear-gradient(to bottom, white, rgb(247, 209, 215));
 }
 
-#list {
-  margin-left: 200px;
-  margin-top: 100px;
-
+#destination-list {
+  margin: 0 auto;
 }
 
+.destination-content {
+  display: grid;
+  padding: 5rem 0;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+
 #video {
-  display: block;
-  height: 50%;
-  left: 45%;
-  position: absolute;
-  top: 220%;
-  width: 50%;  
+  margin: 0 auto;
 }
 
 
@@ -123,9 +125,32 @@ text-align: center;
 
 .connect-link {
   margin: 0 auto;
-  
 }
 
 .connect-link:hover {
-opacity: 0.75  
+  opacity: 0.75  
+}
+
+@media (max-width: 768px) {
+  #title {
+    font-size: 90px;
+      }
+  #suitcase-image {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .destination-content {
+    grid-template-columns: 1fr;
+  }
+  .nav-link {
+    font-size: 21px;
+  }
+  #suitcase-image {
+    width: 60vw;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
 }
